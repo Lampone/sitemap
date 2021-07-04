@@ -137,7 +137,7 @@ class Sitemap
 
         return [
             'loc' => $augmented->get('permalink') ?? $augmented->get('absolute_url'),
-            'lastmod' => $augmented->get('updated_at'),
+            'lastmod' => $augmented->lastModified(),
             'changefreq' => $augmented->get('change_frequency'),
             'priority' => $augmented->get('priority'),
         ];
